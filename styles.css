@@ -376,9 +376,8 @@ small {
   /* align-items: center; */
 }
 
-
 .btn-one {
-  color: #FFF;
+  color: #fff;
   transition: all 0.3s;
   position: relative;
 }
@@ -386,7 +385,7 @@ small {
   transition: all 0.3s;
 }
 .btn-one::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -407,11 +406,11 @@ small {
   letter-spacing: 2px;
 }
 .btn-one:hover::before {
-  opacity: 1; 
-  transform: scale(1, 1); 
+  opacity: 1;
+  transform: scale(1, 1);
 }
 .btn-one::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -419,14 +418,12 @@ small {
   height: 100%;
   z-index: 1;
   transition: all 0.3s;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .btn-one:hover::after {
-  opacity: 0; 
+  opacity: 0;
   transform: scale(0.1, 1);
 }
-
-
 
 .download-link {
   color: var(--other-clr);
@@ -860,20 +857,29 @@ small {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* For the .project:nth-child(even) selector */
   .project:nth-child(even) img {
     order: 1;
+    -webkit-order: 1; /* Safari prefix */
   }
   .project:nth-child(even) div {
     order: 2;
+    -webkit-order: 2; /* Safari prefix */
   }
 
+  /* For the .other-projects section */
   .other-projects {
     grid-template-columns: 1fr;
     text-align: center;
+    display: -webkit-box; /* Safari prefix for flex display */
+    -webkit-box-orient: vertical; /* Safari prefix for flex direction */
+    -webkit-box-pack: center; /* Safari prefix for justify-content */
+    -webkit-box-align: center; /* Safari prefix for align-items */
   }
 
   .other-projects ul {
-    justify-content: center;
+    display: -webkit-box; /* Safari prefix for flex display */
+    -webkit-box-pack: center; /* Safari prefix for justify-content */
   }
 
   .footer .container {
