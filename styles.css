@@ -891,3 +891,24 @@ small {
     justify-content: center;
   }
 }
+
+/* Apply styles only to Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .project:nth-child(even) img {
+      order: 1;
+    }
+    .project:nth-child(even) div {
+      order: 2;
+    }
+
+    .other-projects {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .other-projects ul {
+      justify-content: center;
+    }
+  }
+}
