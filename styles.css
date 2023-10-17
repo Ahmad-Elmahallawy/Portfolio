@@ -860,13 +860,21 @@ small {
   }
 
   /* For the .project:nth-child(even) selector */
-  .project:nth-child(even) img {
-    order: 1;
-    -webkit-order: 1; /* Safari prefix */
+  .project:nth-child(even) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "image"
+      "description";
   }
+
+  .project:nth-child(even) .project-img {
+    grid-area: image;
+  }
+
   .project:nth-child(even) div {
-    order: 2;
-    -webkit-order: 2; /* Safari prefix */
+    grid-area: description;
   }
 
   .footer .container {
@@ -876,18 +884,5 @@ small {
 
   .mail-link {
     justify-content: center;
-  }
-}
-
-/* Apply styles for even .project items in Safari */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  .project:nth-child(even) img {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  .project:nth-child(even) div {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
   }
 }
