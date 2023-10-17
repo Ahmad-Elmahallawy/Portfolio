@@ -878,20 +878,16 @@ small {
 
   /* For the .project:nth-child(even) selector */
   .project:nth-child(even) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "image"
-      "description";
+    display: flex;
+    flex-direction: column;
   }
 
   .project:nth-child(even) .project-img {
-    grid-area: image;
+    order: 1;
   }
 
   .project:nth-child(even) div {
-    grid-area: description;
+    order: 2;
   }
 
   .footer .container {
