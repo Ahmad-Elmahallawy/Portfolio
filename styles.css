@@ -736,7 +736,6 @@ small {
   align-items: flex-end;
 }
 
-
 /* responsiveness */
 @media screen and (max-width: 50em) {
   body::after {
@@ -870,8 +869,6 @@ small {
     -webkit-order: 2; /* Safari prefix */
   }
 
-
-
   .footer .container {
     justify-content: center;
     gap: 3rem;
@@ -885,13 +882,12 @@ small {
 /* Apply styles for even .project items in Safari */
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   .project:nth-child(even) img {
-    -webkit-order: 1;
-    order: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
-  
+
   .project:nth-child(even) div {
-    -webkit-order: 2;
-    order: 2;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
