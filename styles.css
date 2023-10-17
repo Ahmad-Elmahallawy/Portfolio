@@ -859,6 +859,13 @@ small {
     position: relative;
   }
 
+  .hero-btn-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .hero img {
     display: none;
   }
