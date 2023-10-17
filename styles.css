@@ -802,10 +802,6 @@ small {
     pointer-events: all;
   }
 
-  .hero-btn-container {
-    justify-content: center;
-  }
-
   /* hamburger menu */
   .hamburger {
     width: 25px;
