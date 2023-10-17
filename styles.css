@@ -735,27 +735,6 @@ small {
 }
 
 
-/* Apply styles only to Safari */
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .project:nth-child(even) img {
-      order: 1;
-    }
-    .project:nth-child(even) div {
-      order: 2;
-    }
-
-    .other-projects {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .other-projects ul {
-      justify-content: center;
-    }
-  }
-}
-
 /* responsiveness */
 @media screen and (max-width: 50em) {
   body::after {
@@ -901,4 +880,16 @@ small {
   }
 }
 
+/* Apply styles for even .project items in Safari */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .project:nth-child(even) img {
+    -webkit-order: 1;
+    order: 1;
+  }
+  
+  .project:nth-child(even) div {
+    -webkit-order: 2;
+    order: 2;
+  }
+}
 
