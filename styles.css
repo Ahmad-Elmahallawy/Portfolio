@@ -134,15 +134,6 @@ h3 {
     transform: translateY(-20px);
   }
 }
-@keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-
 @keyframes bounce-in-left {
   0% {
     transform: translateX(-600px);
@@ -754,7 +745,7 @@ small {
 }
 
 /* responsiveness */
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 1080px) {
   body::after {
     position: absolute;
     content: "";
@@ -877,17 +868,13 @@ small {
   }
 
   /* For the .project:nth-child(even) selector */
-  .project:nth-child(even) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project:nth-child(even) .project-img {
+  .project:nth-child(even) img {
     order: 1;
+    -webkit-order: 1; /* Safari prefix */
   }
-
   .project:nth-child(even) div {
     order: 2;
+    -webkit-order: 2; /* Safari prefix */
   }
 
   .footer .container {
