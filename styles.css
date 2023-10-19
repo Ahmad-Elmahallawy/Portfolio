@@ -923,10 +923,6 @@ small {
     width: 90%;
   }
 
-  .concordia {
-    box-shadow: -6px -6px var(--accent-clr);
-  }
-
   .my-skills ul {
     grid-template-columns: repeat(2, 1fr);
   }
