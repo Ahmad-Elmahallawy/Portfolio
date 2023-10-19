@@ -500,8 +500,11 @@ small {
 }
 
 .work-container img {
-  width: 100%;
-  height: 130px;
+  display: block;
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
 }
 
 .work-item {
@@ -516,6 +519,10 @@ small {
 
 .concordia {
   box-shadow: 3px -3px 0px 0px var(--accent-clr);
+}
+
+.hackconcordia {
+  box-shadow: -3px 3px 0px 0px var(--accent-clr);
 }
 
 .work-item h3 {
@@ -917,6 +924,24 @@ small {
     flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
+  }
+
+  .concordia,
+  .hackconcordia,
+  .bombardier {
+    box-shadow: 0px 0px 0px 0px;
+  }
+
+  .concordia img,
+  .hackconcordia img,
+  .bombardier img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .concordia,
+  .hackconcordia {
+    border-top: 3px solid var(--accent-clr);
   }
 
   .work-item {
