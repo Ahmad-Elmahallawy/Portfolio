@@ -511,11 +511,11 @@ small {
 }
 
 .bombardier {
-  box-shadow: -6px -6px 0px 0px var(--accent-clr);
+  box-shadow: -3px -3px 0px 0px var(--accent-clr);
 }
 
 .concordia {
-  box-shadow: 6px -6px 0px 0px var(--accent-clr);
+  box-shadow: 3px -3px 0px 0px var(--accent-clr);
 }
 
 .work-item h3 {
